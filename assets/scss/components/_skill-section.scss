@@ -17,21 +17,6 @@
       display: none;
     }
   }
-  &__background_pattern {
-    position: absolute;
-    bottom: 5%;
-    right: 10%;
-    height: 100px;
-    width: 100px;
-    animation: move_top 3s infinite linear;
-    img {
-      height: 100%;
-      width: 100%;
-    }
-    @include desktop {
-      display: none;
-    }
-  }
   &__thumb {
     position: relative;
     @include tablet {
