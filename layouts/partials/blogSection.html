@@ -21,10 +21,10 @@
 			<div class="col-lg-4">
 				<div class="blog-preview__item">
 					<div class="blog-preview__item-thumb">
-						{{ if .Params.featureImage }}
+						{{ if .Params.img }}
 						<picture>
-							<source loading="lazy" srcset="{{ .Params.featureImage | absURL }}.avif" type="image/avif" alt="post-image">
-							<img loading="lazy" src="{{ .Params.featureImage | absURL }}.png" alt="post-image">
+							<source loading="lazy" srcset="{{ .Params.img | absURL }}.avif" type="image/avif" alt="post-image">
+							<img loading="lazy" src="{{ .Params.img | absURL }}.png" alt="post-image">
 						</picture>
 						{{ end }}
 					</div>

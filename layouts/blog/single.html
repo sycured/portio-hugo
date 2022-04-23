@@ -45,10 +45,10 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="singleBlog__feature">
-          {{ if .Params.postImage }}
+          {{ if .Params.img }}
             <picture>
-              <source srcset="{{ .Params.postImage | absURL }}.avif" type="image/avif" alt="feature-image">
-              <img src="{{ .Params.postImage | absURL }}.png" alt="feature-image">
+              <source loading="lazy" srcset="{{ .Params.img | absURL }}.avif" type="image/avif" alt="{{ if .Params.img_alt }}{{ .Params.img_alt}}{{ else }}feature-image{{end}}" {{ if .Params.img_width }} width="{{ .Params.img_width }}" {{ end }} {{ if .Params.img_height }} height="{{ .Params.img_height }}" {{ end }}>
+              <img loading="lazy" src="{{ .Params.img | absURL }}.png" alt="{{ if .Params.img_alt }}{{ .Params.img_alt}}{{ else }}feature-image{{end}}" {{ if .Params.img_width }} width="{{ .Params.img_width }}" {{ end }} {{ if .Params.img_height }} height="{{ .Params.img_height }}" {{ end }}>
             </picture>
           {{ end }}
         </div>

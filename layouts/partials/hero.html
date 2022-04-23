@@ -20,12 +20,10 @@
       </div>
       <div class="col-lg-6">
         <div class="hero_figure">
-          <img src="{{ .image | absURL }}" alt="hero-image" style='
-                  -webkit-mask: url({{"images/hero/hero-mask-svg.png" | absURL }});
-                  -webkit-mask-repeat: no-repeat;
-                  -webkit-mask-size: contain;
-                  -webkit-mask-position: center center;
-                ' />
+          <picture>
+            <source srcset="{{ .image | absURL }}.avif" type="image/avif" alt="hero-image" style='-webkit-mask: url({{"images/hero/hero-mask-svg.png" | absURL }}); -webkit-mask-repeat: no-repeat; -webkit-mask-size: contain; -webkit-mask-position: center center;' />
+            <img src="{{ .image | absURL }}.png" alt="hero-image" style='-webkit-mask: url({{"images/hero/hero-mask-svg.png" | absURL }}); -webkit-mask-repeat: no-repeat; -webkit-mask-size: contain; -webkit-mask-position: center center;' />
+          </picture>
 
           {{ if .videoURL }}
           <div class="hero_figure-popup">

@@ -1,3 +1,5 @@
+gsap.config({nullTargetWarn: false});
+
 // Preloader
 
 function PageLoad() {

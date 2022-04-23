@@ -15,8 +15,10 @@
                 <div class="about_content">
                     <div class="about_content-thumb">
                         <div class="about_content-thumb-image">
-                            <img src="{{ .image | absURL }}" alt="about-img"
-                                style='-webkit-mask: url({{"images/about/about-mask-svg.svg" | absURL}}); -webkit-mask-size: contain;'>
+                            <picture>
+                                <source srcset="{{ .image | absURL }}.avif" type="image/avif" alt="about-img" style='-webkit-mask: url({{"images/about/about-mask-svg.svg" | absURL}}); -webkit-mask-size: contain;'>
+                                <img src="{{ .image | absURL }}.png" alt="about-img" style='-webkit-mask: url({{"images/about/about-mask-svg.svg" | absURL}}); -webkit-mask-size: contain;'>
+                            </picture>
                         </div>
                     </div>
                     <div class="about_content-inner">
