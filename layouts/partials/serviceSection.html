@@ -33,7 +33,11 @@
                                 </svg>
                             </div>
                             <div class="icon">
-                                <img src=" {{ .image | absURL }} " alt="ui-ux">
+                                <picture>
+                                    <source loading="lazy" {{ if .height }} height="{{ .height }}" {{ end }} {{ if .width }} width="{{ .width }}" {{ end }} srcset="{{ .image | absURL }}.avif" type="image/avif" alt="service icon">
+                                    <img loading="lazy" {{ if .height }} height="{{ .height }}" {{ end }} {{ if .width }} width="{{ .width }}" {{ end }} src="{{ .image | absURL }}.png" alt="service icon">
+                                </picture>
+                                
                             </div>
                         </div>
                         <div class="mt-5">

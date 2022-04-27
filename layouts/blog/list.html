@@ -17,10 +17,10 @@
 			<div class="col-lg-4">
 				<div class="blog-page__item">
 					<div class="blog-page__item-thumb">
-						{{ if .Params.featureImage }}
+						{{ if .Params.img }}
 						<picture>
-							<source srcset="{{ .Params.featureImage | absURL }}.avif" type="image/avif" alt="post-image">
-							<img src="{{ .Params.featureImage | absURL }}.png" alt="post-image">
+              <source loading="lazy" srcset="{{ .Params.img | absURL }}.avif" type="image/avif" alt="{{ if .Params.img_alt }}{{ .Params.img_alt}}{{ else }}feature-image{{end}}">
+              <img loading="lazy" src="{{ .Params.img | absURL }}.png" alt="{{ if .Params.img_alt }}{{ .Params.img_alt}}{{ else }}feature-image{{end}}">
 						</picture>
 						{{ end }}
 					</div>
