@@ -13,16 +13,15 @@ function PageLoad() {
   });
 
   var width = 100,
-    perfData = window.performance.timing,
-    EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart),
+    perfData = window.PerformanceNavigationTiming,
+    EstimatedTime = -(perfData.loadEventEnd - perfData.fetchStart),
     time = parseInt((EstimatedTime / 500) % 50) * 70;
 
   // Percentage Increment Animation
   var PercentageID = $("#precent"),
     start = 1,
-    end = 100,
-    durataion = time;
-  animateValue(PercentageID, start, end, durataion);
+    end = 100;
+  animateValue(PercentageID, start, end, time);
 
   function animateValue(id, start, end, duration) {
     var range = end - start,
@@ -81,10 +80,6 @@ $(document).ready(function () {
         1000
       );
     }
-  });
-
-  $(".navbar-nav>li>a").on("click", function () {
-    $(".navbar-collapse").collapse("hide");
   });
 
   // service slider
