@@ -25,7 +25,6 @@
             {{ if .Params.featureImage }}
             <picture>
               <source srcset="{{ .Params.featureImage | absURL }}.avif" type="image/avif" alt="post-image">
-              <img src="{{ .Params.featureImage | absURL }}.png" alt="post-image">
             </picture>
             {{ end }}
           </div>

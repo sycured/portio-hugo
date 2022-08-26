@@ -20,7 +20,6 @@
 						{{ if .Params.img }}
 						<picture>
               <source srcset="{{ .Params.img | absURL }}.avif" type="image/avif" alt="{{ if .Params.img_alt }}{{ .Params.img_alt}}{{ else }}feature-image{{end}}">
-              <img src="{{ .Params.img | absURL }}.png" alt="{{ if .Params.img_alt }}{{ .Params.img_alt}}{{ else }}feature-image{{end}}">
 						</picture>
 						{{ end }}
 					</div>

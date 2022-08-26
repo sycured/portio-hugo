@@ -24,7 +24,6 @@
 						{{ if .Params.img }}
 						<picture>
 							<source loading="lazy" srcset="{{ .Params.img | absURL }}.avif" type="image/avif" alt="post-image">
-							<img loading="lazy" src="{{ .Params.img | absURL }}.png" alt="post-image">
 						</picture>
 						{{ end }}
 					</div>

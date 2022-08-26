@@ -35,7 +35,6 @@
                             <div class="icon">
                                 <picture>
                                     <source loading="lazy" {{ if .height }} height="{{ .height }}" {{ end }} {{ if .width }} width="{{ .width }}" {{ end }} srcset="{{ .image | absURL }}.avif" type="image/avif" alt="service icon">
-                                    <img loading="lazy" {{ if .height }} height="{{ .height }}" {{ end }} {{ if .width }} width="{{ .width }}" {{ end }} src="{{ .image | absURL }}.png" alt="service icon">
                                 </picture>
                                 
                             </div>

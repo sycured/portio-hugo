@@ -48,7 +48,6 @@
           {{ if .Params.img }}
             <picture>
               <source srcset="{{ .Params.img | absURL }}.avif" type="image/avif" alt="{{ if .Params.img_alt }}{{ .Params.img_alt}}{{ else }}feature-image{{end}}" {{ if .Params.img_width }} width="{{ .Params.img_width }}" {{ end }} {{ if .Params.img_height }} height="{{ .Params.img_height }}" {{ end }}>
-              <img src="{{ .Params.img | absURL }}.png" alt="{{ if .Params.img_alt }}{{ .Params.img_alt}}{{ else }}feature-image{{end}}" {{ if .Params.img_width }} width="{{ .Params.img_width }}" {{ end }} {{ if .Params.img_height }} height="{{ .Params.img_height }}" {{ end }}>
             </picture>
           {{ end }}
         </div>
