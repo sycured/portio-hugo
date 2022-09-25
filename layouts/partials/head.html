@@ -25,6 +25,5 @@
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
   {{ $style := resources.Get "scss/style.scss" | resources.ToCSS | postCSS | minify }}
-  {{ $styleSecure := $style | resources.Fingerprint "sha512" }}
-  <link href="https://assets.sycured.com{{ $style.RelPermalink }}" rel="stylesheet" integrity="{{ $styleSecure.Data.Integrity }}" />
+  <link href="https://assets.sycured.com{{ $style.RelPermalink }}" rel="stylesheet" />
 </head>
