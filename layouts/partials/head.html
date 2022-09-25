@@ -9,6 +9,8 @@
   <!-- <meta name="description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}Welcome to my world, you'll learn about my interests. SRE, DevOps, Security, functional programming and more{{ end }}"> -->
   <meta name="description"
     content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <link rel="dns-prefetch" href="https://assets.sycured.com">
+  <link href="https://assets.sycured.com" rel="preconnect" crossorigin>
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com" rel="preconnect" crossorigin>
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
@@ -17,12 +19,12 @@
   <link href="https://unpkg.com" rel="preconnect" crossorigin>
   <link rel="dns-prefetch" href="https://static.cloudflareinsights.com">
   <link href="https://static.cloudflareinsights.com" rel="preconnect" crossorigin>
-  <link rel="shortcut icon" href="{{ "images/favicon.ico" | absURL }}" type="image/x-icon" />
-  <link rel="icon" href="{{ "images/favicon.png" | absURL }}" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://assets.sycured.com/images/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="https://assets.sycured.com/images/favicon.png" type="image/x-icon" />
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a154283ff8cd48a4b27f4ad7ed6408fa"}'></script>
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
   {{ $style := resources.Get "scss/style.scss" | resources.ToCSS | postCSS | minify }}
   {{ $styleSecure := $style | resources.Fingerprint "sha512" }}
-  <link href="{{ $style.Permalink }}" rel="stylesheet" integrity="{{ $styleSecure.Data.Integrity }}" />
+  <link href="https://assets.sycured.com{{ $style.RelPermalink }}" rel="stylesheet" integrity="{{ $styleSecure.Data.Integrity }}" />
 </head>
