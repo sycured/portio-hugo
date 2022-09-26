@@ -1,6 +1,10 @@
 <div class="blog-section">
     <h3>{{ .Get "title" }}</h3>
-    <img src="{{ .Get "image" | absURL}}"  alt="blog-img">
+    <picture>
+        <source srcset="https://assets.sycured.com{{ .Get "image" }}.avif" type="image/avif" alt="blog-img">
+        <img src="https://assets.sycured.com{{ .Get "image" }}.pmg"  alt="blog-img">
+
+    </picture>
     <p>
         {{ .Inner }}
     </p>

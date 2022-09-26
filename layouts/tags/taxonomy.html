@@ -24,8 +24,8 @@
           <div class="blog-page__item-thumb">
             {{ if .Params.featureImage }}
             <picture>
-              <source srcset="{{ .Params.featureImage | absURL }}.avif" type="image/avif" alt="post-image">
-              <img src="{{ .Params.featureImage | absURL }}.png" alt="post-image">
+              <source srcset="https://assets.sycured.com{{ .Params.featureImage }}.avif" type="image/avif" alt="post-image">
+              <img src="https://assets.sycured.com{{ .Params.featureImage }}.png" alt="post-image">
             </picture>
             {{ end }}
           </div>
