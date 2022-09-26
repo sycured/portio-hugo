@@ -32,7 +32,7 @@
           height: 100%;
           width: 100%;
           &.about_mask_svg {
-            mask: url("https://assets.sycured.com/images/about/about-mask-svg.svg");
+            mask: url("../masks/about.svg");
             -webkit-mask-repeat: no-repeat;
             -webkit-mask-size: contain;
             -webkit-mask-position: center center;
