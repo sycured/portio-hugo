@@ -11,6 +11,7 @@
 </header>
 
 {{ $address := .Site.Params.address }}
+{{ $cloudflare := .Site.Params.cloudflare }}
 <section class="section contact__info">
   <div class="container">
     <div class="row">
@@ -39,7 +40,44 @@
       </div>
       <div class="col-lg-6">
         <div class="contact__info_item">
-          <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script><iframe class="airtable-embed airtable-dynamic-height" src="https://airtable.com/embed/shrKW2UQZFGKBuZsf?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="1193" style="background: transparent; border: none;"></iframe>
+          <form data-static-form-name="contact">
+            <div class="mb-3">
+              <label for="tags" class="form-label">Tags</label>
+              <div id="tagsHelp" class="form-text">Multiple values can be selected</div>
+              <select class="form-select" name="tags" id="tags" multiple aria-describedby="tagsHelp">
+                <option value="C2C">C2C</option>
+                <option value="Contract">Contract</option>
+                <option value="Digital Nomad friendly">Digital Nomad friendly</option>
+                <option value="Full Remote">Full Remote</option>
+                <option value="Permanent">Permanent</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="first_name" class="form-label">First name</label>
+              <input type="text" class="form-control" name="first_name" id="first_name">
+            </div>
+            <div class="mb-3">
+              <label for="last_name" class="form-label">Last name</label>
+              <input type="text" class="form-control" name="last_name" id="last_name">
+            </div>
+            <div class="mb-3">
+              <label for="company" class="form-label">Company</label>
+              <input type="text" class="form-control" name="company" id="company">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">Will be used to answer you.</div>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" name="message" id="message"></textarea>
+            </div>
+            <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+            <div class="cf-turnstile" data-sitekey="{{ $cloudflare.turnstile_key }}" data-callback="javascriptCallback" data-name="contact-form"></div>
+            <button type="submit" class="btn btn-info">Submit</button>
+          </form>
         </div>
       </div>
     </div>
