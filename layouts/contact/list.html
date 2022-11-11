@@ -55,11 +55,11 @@
             </div>
             <div class="mb-3">
               <label for="first_name" class="form-label">First name</label>
-              <input type="text" class="form-control" name="first_name" id="first_name">
+              <input required type="text" class="form-control" name="first_name" id="first_name">
             </div>
             <div class="mb-3">
               <label for="last_name" class="form-label">Last name</label>
-              <input type="text" class="form-control" name="last_name" id="last_name">
+              <input required type="text" class="form-control" name="last_name" id="last_name">
             </div>
             <div class="mb-3">
               <label for="company" class="form-label">Company</label>
@@ -67,12 +67,12 @@
             </div>
             <div class="mb-3">
               <label for="email" class="form-label">Email address</label>
-              <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp">
+              <input required type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp">
               <div id="emailHelp" class="form-text">Will be used to answer you.</div>
             </div>
             <div class="mb-3">
               <label for="message" class="form-label">Message</label>
-              <textarea class="form-control" name="message" id="message"></textarea>
+              <textarea required class="form-control" name="message" id="message"></textarea>
             </div>
             <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
             <div class="cf-turnstile" data-sitekey="{{ $cloudflare.turnstile_key }}" data-callback="javascriptCallback" data-name="contact-form"></div>
