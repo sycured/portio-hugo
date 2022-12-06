@@ -35,6 +35,7 @@
                             <div class="icon">
                                 <picture>
                                     <source loading="lazy" {{ if .height }} height="{{ .height }}" {{ end }} {{ if .width }} width="{{ .width }}" {{ end }} srcset="https://assets.sycured.com{{ .image }}.avif" type="image/avif" alt="service icon">
+                                    <img loading="lazy" {{ if .height }} height="{{ .height }}" {{ end }} {{ if .width }} width="{{ .width }}" {{ end }} src="https://assets.sycured.com{{ .image }}.webp" alt="service icon">
                                     <img loading="lazy" {{ if .height }} height="{{ .height }}" {{ end }} {{ if .width }} width="{{ .width }}" {{ end }} src="https://assets.sycured.com{{ .image }}.png" alt="service icon">
                                 </picture>
                                 
