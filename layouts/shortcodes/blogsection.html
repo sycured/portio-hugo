@@ -2,7 +2,7 @@
     <h3>{{ .Get "title" }}</h3>
     <picture>
         <source srcset="https://assets.sycured.com{{ .Get "image" }}.avif" type="image/avif" alt="blog-img">
-        <img src="https://assets.sycured.com{{ .Get " image" }}.webp" alt="blog-img">
+        <source srcset="https://assets.sycured.com{{ .Get " image" }}.webp" type="image/webp" alt="blog-img">
         <img src="https://assets.sycured.com{{ .Get "image" }}.png"  alt="blog-img">
 
     </picture>

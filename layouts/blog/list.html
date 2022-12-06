@@ -20,7 +20,7 @@
 						{{ if .Params.img }}
 						<picture>
               <source srcset="https://assets.sycured.com{{ .Params.img }}.avif" type="image/avif" alt="{{ if .Params.img_alt }}{{ .Params.img_alt}}{{ else }}feature-image{{end}}">
-			  <img src="https://assets.sycured.com{{ .Params.img }}.webp" alt="{{ if .Params.img_alt }}{{ .Params.img_alt}}{{ else }}feature-image{{end}}">
+			  <source srcset="https://assets.sycured.com{{ .Params.img }}.webp" type="image/webp" alt="{{ if .Params.img_alt }}{{ .Params.img_alt}}{{ else }}feature-image{{end}}">
               <img src="https://assets.sycured.com{{ .Params.img }}.png" alt="{{ if .Params.img_alt }}{{ .Params.img_alt}}{{ else }}feature-image{{end}}">
 						</picture>
 						{{ end }}

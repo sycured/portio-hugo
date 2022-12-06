@@ -24,7 +24,7 @@
 						{{ if .Params.img }}
 						<picture>
 							<source loading="lazy" srcset="https://assets.sycured.com{{ .Params.img }}.avif" type="image/avif" alt="post-image">
-							<img loading="lazy" src="https://assets.sycured.com{{ .Params.img }}.webp" alt="post-image">
+							<source loading="lazy" srcset="https://assets.sycured.com{{ .Params.img }}.webp" type="image/webp" alt="post-image">
 							<img loading="lazy" src="https://assets.sycured.com{{ .Params.img }}.png" alt="post-image">
 						</picture>
 						{{ end }}
